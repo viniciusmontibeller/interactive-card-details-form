@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 const FormField = styled.form`
     width: 100%;
-    margin: 10px;
 
     @media(max-width: 450px){
         font-size: 15px;
