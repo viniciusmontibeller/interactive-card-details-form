@@ -33,7 +33,7 @@ const normalizeCardNumber = (value) => {
     return value.replace(/\s/g, "").match(/.{1,4}/g)?.join(" ").substr(0, 19) || ""
 }
 
-const Form = ({onChange, onComplete}) => {
+const Form = ({ onChange, onComplete }) => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm({
         mode: "onBlur",
@@ -50,18 +50,18 @@ const Form = ({onChange, onComplete}) => {
     });
 
     useEffect(() => {
-        if (typeof onChange === "function"){
+        if (typeof onChange === "function") {
             const subscription = watch(onChange)
             return () => subscription.unsubscribe();
         }
-      }, [watch, onChange]);
+    }, [watch, onChange]);
 
     return (
         <FormField
-        onSubmit={handleSubmit((data) => {
-            console.log(data)
-            return onComplete(true)
-        })}>
+            onSubmit={handleSubmit((data) => {
+                console.log(data)
+                return onComplete(true)
+            })}>
             <InputField>
                 <label htmlFor='name'>Cardholder Name</label>
                 <input
