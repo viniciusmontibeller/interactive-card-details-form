@@ -8,6 +8,7 @@ const SubmittedForm = () => {
             <img src={complete} alt="Completed" />
             <h2>Thank you!</h2>
             <p>We've added your card details</p>
+            <span style={{ color: "red" }}>No real data was saved or sent.</span>
             <Button>Continue</Button>
         </CompletedForm>
     )

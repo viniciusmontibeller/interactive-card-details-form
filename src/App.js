@@ -15,6 +15,7 @@ function App() {
   return (
     <Theme>
       <GlobalStyle />
+      <p style={{ textAlign: 'center'}}>This is a educational project, no real data is collected here</p>
       <Main>
         <ContainerCards>
           <FrontCard value={inputs}/>
